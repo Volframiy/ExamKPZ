@@ -1,0 +1,9 @@
+.containerrow{
+    height: 110px;
+}
+
+.barbutton{
+    width: 100%;
+    height: 90px;
+    font-size: large;
+}

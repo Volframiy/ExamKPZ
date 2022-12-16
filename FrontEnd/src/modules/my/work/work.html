@@ -1,0 +1,28 @@
+<template>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" aria-label="Example table of Opportunities with vertical borders">
+        <thead>
+          <tr class="slds-line-height_reset">
+            <th class="slds-text-align_center">Id</th>
+            <th class="slds-text-align_center">Description</th>
+            <th class="slds-text-align_center">Time</th>
+            <th class="slds-text-align_center">Model</th>
+            <th class="slds-text-align_center">Status</th>
+            <th class="slds-text-align_center">Priority</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            <template for:each={data} for:item="d">
+                <tr key={d.id} class="slds-hint-parent">
+                    <th><input value={d.id} name="id" onchange={handleChangeRow} readonly></th>
+                    <th><input value={d.description} name="lastName" onchange={handleChangeRow}/></th>
+                    <th><input value={d.time} name="firstName" onchange={handleChangeRow}/></th>
+                    <th><input value={d.model} name="groupName" onchange={handleChangeRow}/></th>
+                    <th><input value={d.status} name="groupName" onchange={handleChangeRow}/></th>
+                    <th><input value={d.priority} name="groupName" onchange={handleChangeRow}/></th>
+                    <th><input value={d.picked} name="picked" onchange={handleChangeRow} type="checkbox"/></th>
+                  </tr>
+            </template>
+        </tbody>
+    </table> 
+</template>

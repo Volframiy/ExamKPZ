@@ -1,0 +1,34 @@
+<template>
+    <div class="container slds-p-around_medium">
+        <template if:true={isStudent}>
+            <my-student></my-student>
+        </template>
+        <template if:true={isMark}>
+            <my-mark></my-mark>
+        </template>
+        <template if:true={isWork}>
+            <my-work></my-work>
+        </template>
+        <template if:false={isHome}>
+            <div class="slds-p-top_medium">
+                <div class="slds-grid slds-box">
+                    <div class={containerButtonClass}>
+                        <button class={buttonClass} onclick={handleAddRow}>Add Row</button>
+                    </div>
+                    <div class={containerButtonClass}>
+                        <button class={buttonClass} onclick={handleSave}>Save</button>
+                    </div>
+                    <div class={containerButtonClass}>
+                        <button class={buttonClass} onclick={handleDelete}>Delete</button>
+                    </div>
+                    <div class={containerButtonClass}>
+                        <button class={buttonClass} onclick={handleRefresh}>Refresh</button>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template if:true={isHome}>
+            <div class="slds-align_absolute-center slds-text-title_caps" style="height: 60%; font-size:40px; color: #FFFFFF; font-weight: bold;" >This Exam from Hladkyi Vladyslav</div>
+        </template>
+    </div>
+</template>
